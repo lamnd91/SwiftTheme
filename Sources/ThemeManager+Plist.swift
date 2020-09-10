@@ -40,11 +40,14 @@ import UIKit
     
     public class func color(for keyPath: String) -> UIColor? {
         guard let rgba = string(for: keyPath) else { return nil }
-        guard let color = try? UIColor(rgba_throws: rgba) else {
+        if let color = try? UIColor(rgba_throws: rgba) {
+            return color
+        } else if currentTheme?.value(forKeyPath: rgba) != nil {
+            return color(for: rgba)
+        } else {
             print("SwiftTheme WARNING: Not convert rgba \(rgba) at key path: \(keyPath)")
             return nil
         }
-        return color
     }
     
     public class func image(for keyPath: String) -> UIImage? {

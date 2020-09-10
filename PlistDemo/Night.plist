@@ -18,7 +18,7 @@
 	<key>ListViewController</key>
 	<dict>
 		<key>separatorColor</key>
-		<string>#ECF0F1</string>
+		<string>Global.textColor</string>
 	</dict>
 	<key>SelectThemeCell</key>
 	<dict>
@@ -37,7 +37,7 @@
 		<key>buttonTitleColorHighlighted</key>
 		<string>#AAA</string>
 		<key>buttonBackgroundColor</key>
-		<string>#ECF0F1</string>
+		<string>ListViewController.separatorColor</string>
 	</dict>
 </dict>
 </plist>
