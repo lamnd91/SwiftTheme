@@ -412,14 +412,14 @@ public extension UINavigationBarAppearance
 }
 #endif
 
-private func getThemePicker(
+public func getThemePicker(
     _ object : NSObject,
     _ selector : String
 ) -> ThemePicker? {
     return object.themePickers[selector]
 }
 
-private func setThemePicker(
+public func setThemePicker(
     _ object : NSObject,
     _ selector : String,
     _ picker : ThemePicker?
